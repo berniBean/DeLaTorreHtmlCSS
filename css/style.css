@@ -1,5 +1,12 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 /*Globales*/
+body{
+    font-family: 'Raleway', sans-serif;
+}
+h1,h2,h3{
+        font-family: 'Playfair Display', serif;
+}
+
 html {
     box-sizing: border-box;
   }
@@ -29,7 +36,7 @@ a{
    
     padding:  20px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -38,9 +45,39 @@ a{
     margin: 0 auto;
 }  
 
+img{
+    max-width: 100%;
+    display:block ;
+}
+
 .hero {
     background-image: url('../img/principal.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
     height: 550px;
+}
+
+/*categorias*/
+.categorias h2{    
+    text-align: center;
+}
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #fff;
+
+    border-bottom-right-radius: 20px;
+}
+.categoria a{
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 20px;
+
 }
